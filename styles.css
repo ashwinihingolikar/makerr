@@ -1,0 +1,263 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* colors */
+    --background-clr: hsl(230,60%,8%);
+    --primary-color: hsl(206,84%,22%);
+    --secondary-color: hsl(179,80%,58%);
+    --primary-text-color : hsl(0,0%,100%);
+    --secondary-text-color : hsl(207,24%,61%);
+    
+}
+
+body{
+    font-size: 18px;
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--background-clr);
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1, h2, h3, h4, h5{
+    font-weight: bold;
+    color: var(--primary-text-color);
+}
+p{
+    color: var(--secondary-text-color);
+}
+header{
+    padding: 3rem;
+}
+
+
+.hero-img-mobile{
+    width: 100%;
+}
+.hero-img-left, .hero-img-right{
+display: none;
+}
+
+.hero-text{
+    padding: 4rem 1rem;
+    text-align: center;
+    background-image: url(/assets/bg-hero-squiggle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+
+.hero-heading{
+    font-size: 2.3rem;
+    line-height: 1.2;
+    padding-bottom: 1.5rem;
+}
+
+.hero-heading span{
+    color: var(--secondary-color);
+}
+
+.hero-para{
+    padding-bottom: 1.5rem;
+}
+
+.features-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+}
+.features-img-box{
+    width: 8rem;
+    height: 8rem;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+}
+
+.features-heading{
+    padding: 1rem;
+    
+}
+
+.pricing-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pricing-text{
+    width: 70%;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.pricing-heading{
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+
+.pricing-box{
+    background-color: var(--primary-color);
+    margin: 2rem 1rem;
+    border-radius: 0.5rem;
+    padding: 3rem 2rem;
+    position: relative;
+}
+
+.box-icon{
+    position: absolute;
+    top: -20px;
+}
+
+.start-box{
+    padding-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.start-box-heading{
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+.start-box-options{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+.start-box-options img{
+    width: 15px;
+    height: 15px;
+}
+.pricing-box-2{
+    background-color: var(--secondary-color);
+}
+
+.pricing-box-2 p, .pricing-box-2 h5, .pricing-box-2 h2{
+    color: var(--primary-color);
+}
+
+.free, .price{
+    padding-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.price span{
+    font-size: medium;
+}
+
+.contact-container{
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    background-image: url(/assets/bg-footer-squiggle.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.email{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.email-box{
+    margin: 1rem;
+    width: 100%;
+    padding: 0.7rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+   color: var(--primary-text-color);
+}
+
+.submit-btn{
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    height: 2.5rem;
+    background-color: var(--secondary-color);
+    border-radius:2rem;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.submit-btn:hover{
+    border: solid 1px var(--secondary-color);
+    background-color: transparent;
+    color: var(--primary-text-color);
+}
+
+@media screen and (min-width: 650px) {
+    
+   
+    .features{
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     padding: 9rem 2rem 5rem;
+    }
+    .features-container-up{
+        position: relative;
+        bottom: 4rem;
+    }
+    
+}
+
+@media screen and (min-width: 850px) {
+   .hero-img-mobile{
+    display: none;
+   }
+   .hero-img-left, .hero-img-right{
+    display: flex;
+    position: relative;
+    width: 100%;
+   }
+   .hero-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   .hero-heading{
+    font-size: 2rem;
+   }
+  
+   .pricing-text{
+    width: 50%;
+   }
+ 
+   .pricing-boxes{
+    margin: 0 5rem;
+    display: flex;
+   }
+   .email{
+    display: inline;
+   }
+   .email-box{
+    width: 50%;
+   }
+   .submit-btn{
+    width: 50%;
+   }
+
+}
+
+@media screen and (min-width: 1050px) {
+    .features{
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+    }
+ }
